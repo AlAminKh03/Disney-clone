@@ -6,11 +6,11 @@ import { Container, CTA, Description, DisneyLogo, Headline } from './styles'
 
  const SignUp=() =>{
   
-  const image ='https://cnbl-cdn.bamgrid.com/assets/7ecc8bcb60ad77193058d63e321bd21cbac2fc67281dbd9927676ea4a4c83594/original'
+  // const image ='https://cnbl-cdn.bamgrid.com/assets/7ecc8bcb60ad77193058d63e321bd21cbac2fc67281dbd9927676ea4a4c83594/original'
   return (
     <Container>
         <CTA>
-            <DisneyLogo src={image}
+            <DisneyLogo src={'https://cnbl-cdn.bamgrid.com/assets/7ecc8bcb60ad77193058d63e321bd21cbac2fc67281dbd9927676ea4a4c83594/original'}
              alt="Disney logo" 
              loading="lazy"/>
             <Headline>+More than you would ever imagine</Headline>

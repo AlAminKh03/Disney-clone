@@ -9,8 +9,13 @@ export const authOptions = {
       clientSecret:"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"
     })
   ],
-secret:process.env.JWT_SECRET,
-debug:true
+callbacks:{
+  async redirect({url}:{url:any}){
+    if(url.includes('/login'))return '/'
+    if(!url.includes('/'))return '/login'
+return url;
+  }
+}
 }
 
 export default NextAuth(authOptions)

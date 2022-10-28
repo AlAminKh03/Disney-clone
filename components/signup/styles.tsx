@@ -1,12 +1,18 @@
 import Image, { StaticImageData } from "next/image"
 import styled from "styled-components"
+import React from "react"
+// import {ReactComponent as BackgroundImg} from '../../assests/img/background.jpg'
 
 
+
+// export const StyledBackgroundImg =styled(BackgroundImg)`
+
+// `
 
 export const Container = styled.div`
 display:flex;
 position:relative;
-background:rgba(0,0,0,1);
+background:url('/images/home-background.jpg');
 height:100vh;
 padding:5.3vw;
 align-items:center;
