@@ -14,7 +14,6 @@ const theme: DefaultTheme = {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log(pageProps.session);
   return (
     <>
       <ThemeProvider theme={theme}>

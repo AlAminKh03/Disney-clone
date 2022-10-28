@@ -41,3 +41,89 @@ cursor:pointer;
     border-color:transparent;
 }
 `
+
+export const NavMenu = styled.div`
+display:flex;
+flex:1;
+margin-left:25px;
+pading:18px 0px 0px 0px;
+align-items:center;
+span{
+    font-size:13px;
+    position:relative;
+    letter-spacing:1.42px;
+    text-decoration:none;
+}
+&:after{
+    content:'';
+    background:${(props)=>props.theme.white};
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-6px;
+    opacity:0;
+    tarnsform:scalex(0);
+    tarnsition:all 250ms cubic-bezier(0.25, 0.45, 0.46, 0.94) 0s;
+    tarnsform-origin:left center;
+}
+img{
+    height:20px;
+    z-index:auto;
+}
+a{
+    display:flex;
+    align-items:center;
+    padding:0px 12px;
+    cursor:pointer;
+
+}
+&:hover{
+    span:after{
+        transform:scalex(1);
+        opacity:1
+    }
+}
+@media (max-width: 768px){
+    display:none;
+}
+
+`
+
+export const UserImg=styled.img`
+height:100%
+`
+
+export const Dropdown=styled.div`
+postion:fixed;
+top:25px;
+right:15px;
+background: ${props=>props.theme.darkGray};
+border-radius:4px;
+padding:10px;
+font-size:14px;
+letter-spacing:3px;
+width:100%;
+opacity:0;
+
+`
+export const SignOut =styled.div`
+position:relative;
+display:flex;
+height:48px;
+weight:48px;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+${UserImg}{
+    height:100%;
+    width:100%;
+    border-radius:50%
+}
+&:hover{
+    ${Dropdown}{
+        opacity:1;
+        transition-duration:1s
+    }
+
+`
+
